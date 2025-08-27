@@ -1,0 +1,149 @@
+        /* CSS Styling Starts Here */
+        * {
+            box-sizing: border-box; /* Universal: Ensures padding and border are included in the element's total width and height */
+            margin: 0; /* Universal: Resets default outer spacing around elements */
+            padding: 0; /* Universal: Resets default inner spacing within elements */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Universal: Sets a clean, sans-serif font stack for all text */
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); /* Sets a beautiful gradient background from purple to blue */
+            min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
+            display: flex; /* Makes the body a flex container */
+            justify-content: center; /* Horizontally centers its direct child (the .container) */
+            align-items: center; /* Vertically centers its direct child (the .container) */
+            padding: 20px; /* Adds internal spacing around the content, preventing it from sticking to edges */
+        }
+        
+        .container {
+            background-color: white; /* Sets the background of the main content box to white */
+            border-radius: 15px; /* Rounds the corners of the container */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+            width: 100%; /* Makes the container take full width available */
+            max-width: 500px; /* Limits the maximum width of the container for better readability on large screens */
+            padding: 30px; /* Adds internal spacing within the container */
+            text-align: center; /* Centers text content inside the container */
+        }
+        
+        h1 {
+            color: #333; /* Sets a dark grey color for the main heading */
+            margin-bottom: 20px; /* Adds space below the heading */
+            font-weight: 600; /* Makes the heading bold */
+        }
+        
+        .tagline {
+            color: #666; /* Sets a lighter grey color for the tagline */
+            font-size: 18px; /* Sets the font size of the tagline */
+            margin-bottom: 30px; /* Adds space below the tagline */
+        }
+        
+        .calculator {
+            display: flex; /* Makes the calculator section a flex container */
+            flex-direction: column; /* Arranges items vertically */
+            gap: 20px; /* Adds space between flex items (input groups and button) */
+        }
+        
+        .input-group {
+            display: flex; /* Makes each input group a flex container */
+            flex-direction: column; /* Arranges items vertically (label, input, error) */
+            text-align: left; /* Aligns text within the group to the left */
+            gap: 8px; /* Adds space between flex items (label, input, error) */
+        }
+        
+        label {
+            font-weight: 500; /* Makes the label text slightly bold */
+            color: #444; /* Sets a dark grey color for labels */
+        }
+        
+        input {
+            padding: 15px; /* Adds internal spacing inside the input fields */
+            border: 2px solid #ddd; /* Sets a light grey border for input fields */
+            border-radius: 8px; /* Rounds the corners of input fields */
+            font-size: 16px; /* Sets the font size of text inside input fields */
+            transition: border-color 0.3s; /* Smoothly animates border color changes over 0.3 seconds */
+        }
+        
+        input:focus {
+            border-color: #2575fc; /* Changes border color to blue when an input field is focused */
+            outline: none; /* Removes the default outline that browsers add on focus */
+        }
+        
+        button {
+            background: linear-gradient(to right, #6a11cb, #2575fc); /* Sets a gradient background for the button */
+            color: white; /* Sets text color to white */
+            border: none; /* Removes default button border */
+            padding: 15px; /* Adds internal spacing inside the button */
+            border-radius: 8px; /* Rounds the corners of the button */
+            font-size: 18px; /* Sets the font size of the button text */
+            font-weight: 600; /* Makes the button text bold */
+            cursor: pointer; /* Changes cursor to a pointer when hovering over the button */
+            transition: transform 0.2s, box-shadow 0.2s; /* Smoothly animates transform and box-shadow changes */
+            margin-top: 10px; /* Adds space above the button */
+        }
+        
+        button:hover {
+            transform: translateY(-2px); /* Lifts the button slightly on hover */
+            box-shadow: 0 5px 15px rgba(38, 117, 252, 0.4); /* Adds a shadow effect on hover */
+        }
+        
+        button:active {
+            transform: translateY(0); /* Resets the lift effect when the button is actively pressed */
+        }
+        
+        .result {
+            margin-top: 30px; /* Adds space above the result section */
+            padding: 20px; /* Adds internal spacing within the result section */
+            background-color: #f8f9fa; /* Sets a very light grey background for the result section */
+            border-radius: 8px; /* Rounds the corners of the result section */
+            border-left: 5px solid #2575fc; /* Adds a prominent blue border on the left side */
+        }
+        
+        .result h2 {
+            color: #333; /* Sets a dark grey color for the result heading */
+            margin-bottom: 10px; /* Adds space below the result heading */
+        }
+        
+        #result {
+            font-size: 24px; /* Sets a larger font size for the actual percentage value */
+            font-weight: 700; /* Makes the percentage value very bold */
+            color: #2575fc; /* Sets the percentage value color to blue */
+        }
+        
+        .error {
+            color: #e74c3c; /* Sets a red color for error messages */
+            font-weight: 500; /* Makes error message text slightly bold */
+            margin-top: 5px; /* Adds space above error messages */
+            display: none; /* Hides error messages by default */
+        }
+        
+        .instructions {
+            margin-top: 30px; /* Adds space above the instructions section */
+            background-color: #e8f4fd; /* Sets a light blue background for instructions */
+            padding: 15px; /* Adds internal spacing within the instructions section */
+            border-radius: 8px; /* Rounds the corners of the instructions section */
+            text-align: left; /* Aligns text within instructions to the left */
+        }
+        
+        .instructions h3 {
+            color: #2575fc; /* Sets a blue color for the instructions heading */
+            margin-bottom: 10px; /* Adds space below the instructions heading */
+        }
+        
+        .instructions ul {
+            padding-left: 20px; /* Adds left padding to the unordered list */
+        }
+        
+        .instructions li {
+            margin-bottom: 5px; /* Adds space below each list item */
+            color: #555; /* Sets a medium grey color for list items */
+        }
+        
+        @media (max-width: 600px) { /* Media query: applies styles only when screen width is 600px or less */
+            .container {
+                padding: 20px; /* Reduces container padding on smaller screens */
+            }
+            
+            input, button {
+                padding: 12px; /* Reduces input and button padding on smaller screens */
+            }
+        }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage Calculator</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the external CSS file for styling -->
+</head>
+<body>
+    <div class="container"> <!-- Main container for the calculator content -->
+        <h1>Percentage Calculator</h1> <!-- Main heading of the page -->
+        <p class="tagline">Find your Percentage in a Second!!!</p> <!-- Catchy tagline -->
+        
+        <div class="calculator"> <!-- Container for the input fields and button -->
+            <div class="input-group"> <!-- Group for the first input field (part/numerator) -->
+                <label for="num1">Enter the part (numerator):</label> <!-- Label for the first input field -->
+                <input type="number" id="num1" placeholder="e.g., 25"> <!-- Input field for the numerator, expects numbers -->
+                <div id="error1" class="error">Please enter a valid number</div> <!-- Error message for the first input, initially hidden -->
+            </div>
+            
+            <div class="input-group"> <!-- Group for the second input field (whole/denominator) -->
+                <label for="num2">Enter the whole (denominator):</label> <!-- Label for the second input field -->
+                <input type="number" id="num2" placeholder="e.g., 200"> <!-- Input field for the denominator, expects numbers -->
+                <div id="error2" class="error">Please enter a valid number (cannot be zero)</div> <!-- Error message for the second input, initially hidden -->
+            </div>
+            
+            <button onclick="calculatePercentage()">Calculate Percentage</button> <!-- Button to trigger the calculation -->
+        </div>
+        
+        <div class="result"> <!-- Section to display the calculation result -->
+            <h2>Calculated Result:</h2> <!-- Heading for the result -->
+            <p id="result">-</p> <!-- Paragraph where the percentage result will be displayed -->
+        </div>
+        
+        <div class="instructions"> <!-- Section for usage instructions -->
+            <h3>How to use this calculator:</h3> <!-- Heading for instructions -->
+            <ul> <!-- Unordered list of steps -->
+                <li>Enter the part (numerator) in the first field</li> <!-- List item -->
+                <li>Enter the whole (denominator) in the second field</li> <!-- List item -->
+                <li>Click the Calculate Percentage button</li> <!-- List item -->
+                <li>Your result will be displayed as a percentage</li> <!-- List item -->
+            </ul>
+            <p><strong>Formula:</strong> (Part / Whole) × 100 = Percentage</p> <!-- Displays the formula -->
+        </div>
+    </div>
+
+<script src="script.js"></script> <!-- Link to the external JavaScript file for functionality -->
+</body>
+</html>
