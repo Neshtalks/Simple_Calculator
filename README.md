@@ -1,4 +1,4 @@
-# Simple_Calculator
+# Percentage_Calculator
 A clean, responsive web application that calculates percentages quickly and accurately. Perfect for students, teachers, and anyone needing to compute percentages on the fly.
 
 #Features
